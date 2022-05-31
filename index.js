@@ -5,6 +5,10 @@ const app = express();
 const port = 4000;
 
 app.use(express.json());
+app.use(require("./routes/Book"))
+app.use(require("./routes/Genre"))
+app.use(require("./routes/Review"))
+app.use(require("./routes/User"))
 
 mongoose
   .connect(
